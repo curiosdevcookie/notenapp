@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+  <title>Document</title>
+
+  <!-- <link rel='stylesheet' href='styles.css'> -->
+ 
+</head>
+<body>
+  <header>
+    <h1>Rechner für Abschlussnote</h1>
+  </header>
+  <main>
+    <section>
+      <label for='practGrade'>Praktische Note</label>
+      <input type='number' id='practGrade' name='practGrade' min='1' max='5'>
+    </section>
+    <section>
+      <label for='theoGrade'>Theoretische Note</label>
+      <input type='number' id='theoGrade' name='theoGrade' min='1' max='5'>
+    </section>
+    <section>
+      <label for='projectGrade'>Projektnote</label>
+      <input type='number' id='projectGrade' name='projectGrade' min='1' max='5'>
+    </section>
+    <section>
+      <button type='button' id='berechnen'>Berechnen</button>
+    </section>
+    
+    <section>
+      <label for='result'>Gesamtnote:</label>
+      <input type='text' id='result' value='?' readonly>
+    </section>
+  </main>
+  <footer>
+    <cdc-footer></cdc-footer>
+  </footer>
+  
+  <script type='module' src='index.js'></script>
+  <script type='module' src='https://github.com/curiosdevcookie/portfolio-v1.4.1/blob/main/components/footer/cdc-footer.js' crossorigin=''></script>
+  
+</body>
+</html>
