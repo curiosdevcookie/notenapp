@@ -7,40 +7,38 @@
   <title>Document</title>
 
   <!-- <link rel='stylesheet' href='styles.css'> -->
- 
+  <script type='module' src='index.js'></script>
+  <script type='module' src='https://github.com/curiosdevcookie/portfolio-v1.4.1/blob/main/components/footer/cdc-footer.js' crossorigin=''></script>
 </head>
 <body>
   <header>
     <h1>Rechner für Abschlussnote</h1>
   </header>
   <main>
-    <section>
-      <label for='practGrade'>Praktische Note</label>
-      <input type='number' id='practGrade' name='practGrade' min='1' max='5'>
-    </section>
-    <section>
-      <label for='theoGrade'>Theoretische Note</label>
-      <input type='number' id='theoGrade' name='theoGrade' min='1' max='5'>
-    </section>
-    <section>
-      <label for='projectGrade'>Projektnote</label>
-      <input type='number' id='projectGrade' name='projectGrade' min='1' max='5'>
-    </section>
-    <section>
-      <button type='button' id='berechnen'>Berechnen</button>
-    </section>
-    
-    <section>
-      <label for='result'>Gesamtnote:</label>
-      <input type='text' id='result' value='?' readonly>
-    </section>
+    <form>
+      <section>
+        <label for='pract'>Praktische Note</label>
+        <input type='number' id='pract' name='pract' min='1' max='5' required>
+      </section>
+      <section>
+        <label for='theo'>Theoretische Note</label>
+        <input type='number' id='theo' name='theo' min='1' max='5' required>
+      </section>
+      <section>
+        <label for='project'>Projektnote</label>
+        <input type='number' id='project' name='project' min='1' max='5' required>
+      </section>
+      <section>
+        <button type='reset' id='reset' name='reset'>Zurücksetzen</button>
+        <button type='button' id='calculate'>Berechnen</button>
+      </section>
+      <section>
+        <p>Gesamtnote: <span id='result'>?</span></p>
+      </section>
+    </form>
   </main>
   <footer>
     <cdc-footer></cdc-footer>
   </footer>
-  
-  <script type='module' src='index.js'></script>
-  <script type='module' src='https://github.com/curiosdevcookie/portfolio-v1.4.1/blob/main/components/footer/cdc-footer.js' crossorigin=''></script>
-  
 </body>
 </html>
