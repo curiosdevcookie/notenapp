@@ -1,17 +1,25 @@
+
+
+
 function getGrade(theo, pract, project) {
+  //Test if theo, prac, project is 0:
+
   theo = +document.getElementById('theo').value;
   pract = +document.getElementById('pract').value;
   project = +document.getElementById('project').value;
 
-  const average = ((theo * 2 + pract + project) / 4);
-  return (average == 0) ? `Bitte gib alle Noten an.` : average;
+  if (theo === 5 || pract === 5 || project === 5) {
+    return 'Du musst nochmal lernen 😓';
+  } else {
+    const average = ((theo * 2 + pract + project) / 4);
+    return (average == 0) ? `Bitte gib alle Noten an.` : average;
+  }
 }
 function displayResult() {
   document.getElementById('result').innerHTML = getGrade(theo, pract, project);
 }
 
 document.getElementById('calculate').addEventListener('click', displayResult);
-
 
 //TO-DO: Add feature to submit the points first:
 
