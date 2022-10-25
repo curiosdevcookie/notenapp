@@ -1,6 +1,3 @@
-
-
-
 function getGrade(theo, pract, project) {
   //Test if theo, prac, project is 0:
 
@@ -8,13 +5,11 @@ function getGrade(theo, pract, project) {
   pract = +document.getElementById('pract').value;
   project = +document.getElementById('project').value;
 
-  if (theo === 5 || pract === 5 || project === 5) {
-    return 'Du musst nochmal lernen 😓';
-  } else {
-    const average = ((theo * 2 + pract + project) / 4);
-    return (average == 0) ? `Bitte gib alle Noten an.` : average;
-  }
+  return ((theo === 5 || pract === 5 || project === 5) ? 'Du musst wohl nochmal ran 😓' :
+    (theo === 0 || pract === 0 || project === 0) ? 'Du hast noch nicht alles abgegeben 😓' :
+      (theo * 2 + pract + project) / 4);
 }
+
 function displayResult() {
   document.getElementById('result').innerHTML = getGrade(theo, pract, project);
 }
