@@ -15,26 +15,27 @@ font-size: 62.5%;
 --color-ok-light: #49fb35;
 --color-ok-lighter: #45a049;
 --color-ok-darker: darkgreen;
+
+--text-shadow-lighter: var(--color-warn-lighter) 0 0 0.2rem;
 }
 
 body {
 display: grid;
-grid-template-columns: max-content;
+grid-template-columns: 1fr max-content 1fr;
 grid-template-rows: 20rem 1fr 20rem;
 grid-template-areas:
-"header"
-"main"
-"footer";
+". header ."
+". main ."
+". footer .";
 align-items: center;
-justify-items: center;
-
-
-font-size: 2.6rem;
+font-size: calc(1em + 1vw);
 font-family: var(--font-handwritten);
 color: var(--color-primary);
 background-image: url('https://images.pexels.com/photos/3335016/pexels-photo-3335016.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
 background-size: cover;
 background-repeat: no-repeat;
+
+text-shadow: var(--text-shadow-lighter);
 }
 
 header {
@@ -45,15 +46,15 @@ main {
 grid-area: main;
 }
 
-footer {
+cdc-footer {
 grid-area: footer;
-font-size: 1.6rem;
+font-size: calc(0.4em + 1vw);
 border-top: var(--color-primary) solid 0.15rem;
 }
 
 
 button {
-  font-size: 1.6rem;
+  font-size: calc(0.1em + 1vw);
   font-family: var(--font-handwritten);
   color: var(--color-primary);
 }
@@ -80,7 +81,7 @@ input[type=number] {
 }
 
 #result {
-  font-size: 3rem;
+  font-size: calc(0.6em + 1vw);
   text-shadow: var(--color-warn-lighter) 0 0 0.2rem;
 }
 
