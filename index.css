@@ -7,23 +7,30 @@ box-sizing: border-box;
 
 font-size: 62.5%;
 
---color-primary: #f5f5f5;
+--font-handwritten: "Beth Ellen", cursive;
 
+--color-primary: #f5f5f5;
+--color-warn-lighter: lightcoral;
+--color-warn-darker: darkred;
+--color-ok-light: #49fb35;
+--color-ok-lighter: #45a049;
+--color-ok-darker: darkgreen;
 }
 
 body {
 display: grid;
-grid-template-columns: 20rem 1fr 20rem;
-grid-template-rows: 1fr 1fr;
+grid-template-columns: max-content;
+grid-template-rows: 20rem 1fr 20rem;
 grid-template-areas:
-"header header"
-"main main"
-"footer footer";
-align-items: center;
-justify-items: center;
+"header"
+"main"
+"footer";
 
-font-family: 'Beth Ellen', cursive;
+align-items: center;
+justify-content:center;
+
 font-size: 2.6rem;
+font-family: var(--font-handwritten);
 color: var(--color-primary);
 background-image: url('https://images.pexels.com/photos/3335016/pexels-photo-3335016.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
 background-size: cover;
@@ -40,43 +47,52 @@ grid-area: main;
 
 footer {
 grid-area: footer;
+font-size: 1.6rem;
+border-top: var(--color-primary) solid 0.15rem;
 }
 
+
 button {
-  font-family: 'Beth Ellen', cursive;
   font-size: 1.6rem;
+  font-family: var(--font-handwritten);
   color: var(--color-primary);
 }
 
 button[type=button] {
-  background-color: darkgreen;
+  background-color: var(--color-ok-darker);
 }
 
 button[type=button]:hover {
-  background-color: #45a049;
+  background-color: var(--color-ok-lighter);
 }
 
 button[type=reset] {
-  background-color: darkred;
+  background-color: var(--color-warn-darker);
 }
 
 button[type=reset]:hover {
-  background-color: lightcoral;
+  background-color: var(--color-warn-lighter);
 }
 
 input[type=number] {
-  width: 3rem;
+  width: 4rem;
+  font-family: var(--font-handwritten);
 }
 
 #result {
   font-size: 3rem;
-  text-shadow: lightcoral 0 0 0.2rem;
+  text-shadow: var(--color-warn-lighter) 0 0 0.2rem;
 }
 
-/* input:valid {
-    background-color: ivory;
-    border: none;
-    outline: 2px solid greenyellow;
-    border-radius: 5px;
-    color: green;
-} */
+input:invalid + span::before {
+  content: "✖";
+  color: var(--color-warn-lighter);
+  font-size: 2rem;
+  font-family: var(--font-handwritten);
+}
+
+input:valid + span::before {
+  content: "✓";
+  color: var(--color-ok-light);
+  font-family: var(--font-handwritten);
+}
