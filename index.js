@@ -9,7 +9,6 @@ function getGrade(theo, pract, project) {
     (theo === 0 || pract === 0 || project === 0) ? 'Du hast noch nicht alles abgegeben 😓' :
       (theo * 2 + pract + project) / 4);
 }
-
 function displayResult() {
   document.getElementById('result').innerHTML = getGrade(theo, pract, project);
 }
@@ -24,7 +23,6 @@ document.getElementById('calculate').addEventListener('click', displayResult);
 70 <= score < 80	'3'
 60 <= score < 70	'4'
 0 <= score < 60	'5'
-Tested values are all between 0 and 100. Theres is no need to check for negative values or values greater than 100. * /
 */
 
 // function toGrade (theoPoints, practPoints, projectPoints) {
