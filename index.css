@@ -51,7 +51,7 @@ grid-area: main;
 
 cdc-footer {
 grid-area: footer;
-font-size: calc(0.08em + 1vw);
+font-size: calc(0.1em + 1vw);
 border-top: var(--color-primary) solid 0.15rem;
 }
 
