@@ -35,7 +35,6 @@ color: var(--color-primary);
 background-image: url('https://images.pexels.com/photos/3335016/pexels-photo-3335016.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
 background-size: 100% auto;
 background-repeat: no-repeat;
-background-attachment: fixed;
 
 text-shadow: var(--text-shadow-lighter);
 }
