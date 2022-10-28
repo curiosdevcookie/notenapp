@@ -15,6 +15,7 @@ font-size: 62.5%;
 --color-ok-light: #49fb35;
 --color-ok-lighter: #45a049;
 --color-ok-darker: darkgreen;
+--color-bg: #150000;
 
 --text-shadow-lighter: var(--color-warn-lighter) 0 0 0.2rem;
 }
@@ -25,6 +26,7 @@ html {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: var(--color-bg);
 }
 
 body {
