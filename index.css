@@ -17,7 +17,7 @@ font-size: 62.5%;
 --color-ok-darker: darkgreen;
 --color-bg: #150000;
 
---text-shadow-lighter: burlywood 0.1rem 0.1rem 0.1rem;
+--text-shadow-lighter: var(--color-bg) 0.2rem 0.2rem 0.2rem;
 
 }
 
