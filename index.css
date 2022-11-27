@@ -103,3 +103,26 @@ input:valid + span::before {
   color: var(--color-ok-light);
   font-family: var(--font-handwritten);
 }
+
+/* #celebration{
+  width: 100vh;
+  position: absolute;
+  background-image: url('https://image.similarpng.com/very-thumbnail/2021/04/Smiling-Face-with-Open-Mouth-Emoji-on-transparent-background-PNG.png');
+  background-repeat: repeat;
+  background-position: center;
+  animation: bounce 1s infinite;
+} */
+
+  /* animation: bounce 1s infinite; */
+
+/* @keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} */
