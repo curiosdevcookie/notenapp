@@ -15,12 +15,19 @@ function displayResult() {
 
 document.getElementById('calculate').addEventListener('click', displayResult);
 document.getElementById('calculate').addEventListener('click', celebrations);
-// Display celebrations gif if the value of #result is between 1.0 and 2.3:
 
-function celebrations(result) {
-  return (document.getElementById('result').innerHTML <= 3) ? console.log("good") : console.log("bad");
-}
+// // Display celebrations gif if the value of #result is between 1.0 and 2.3:
 
-function showGif() {
+// function celebrations(result) {
+//   return (document.getElementById('result').innerHTML <= 3) ? console.log("good") : console.log("bad");
+// }
 
+// function showGif() {
+
+// }
+
+
+if ("serviceWorker" in navigator) {
+  // register service worker
+  navigator.serviceWorker.register("service-worker.js");
 }
