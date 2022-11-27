@@ -104,6 +104,14 @@ input:valid + span::before {
   font-family: var(--font-handwritten);
 }
 
+.add-button {
+  color: var(--color-warn-lighter);
+  position: absolute;
+  margin: 1rem;
+  top:0;
+  right:0;
+}
+
 /* #celebration{
   width: 100vh;
   position: absolute;
