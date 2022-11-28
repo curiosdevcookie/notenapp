@@ -55,7 +55,7 @@ main {
 
 cdc-footer {
   grid-area: footer;
-  font-size: calc(0.2em + 1vw);
+  font-size: calc(0.3rem + 1vw);
   border-top: var(--color-primary) solid 0.15rem;
 }
 
@@ -105,11 +105,12 @@ input:valid + span::before {
 }
 
 .add-button {
-  color: var(--color-warn-lighter);
+  color: var(--color-warn-darker);
   position: absolute;
   margin: 1rem;
   top:0;
   right:0;
+  text-shadow: none;
 }
 
 /* #celebration{
