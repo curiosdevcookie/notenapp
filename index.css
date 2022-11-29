@@ -113,6 +113,12 @@ input:valid + span::before {
   text-shadow: none;
 }
 
+@media all and (display-mode: standalone) {
+  body {
+    background-color: yellow;
+  }
+}
+
 /* #celebration{
   width: 100vh;
   position: absolute;
