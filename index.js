@@ -34,6 +34,9 @@ if ("serviceWorker" in navigator) {
 
 // Initialize deferredPrompt for use later to show browser install prompt.
 let deferredPrompt;
+const buttonInstall = document.querySelector('.add-button');
+buttonInstall.style.display = 'none';
+
 
 window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent the mini-infobar from appearing on mobile
